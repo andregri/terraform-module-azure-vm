@@ -1,3 +1,8 @@
+variable "enable_bastion" {
+  type    = bool
+  default = false
+}
+
 variable "prefix" {
   type    = string
   default = "tfvmex"
