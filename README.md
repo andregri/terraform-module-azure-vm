@@ -23,10 +23,14 @@ No modules.
 | Name | Type |
 | ---- | ---- |
 | [azurerm_bastion_host.bastion](https://registry.terraform.io/providers/hashicorp/azurerm/5.5.0/docs/resources/bastion_host) | resource |
+| [azurerm_nat_gateway.this](https://registry.terraform.io/providers/hashicorp/azurerm/5.5.0/docs/resources/nat_gateway) | resource |
+| [azurerm_nat_gateway_public_ip_association.this](https://registry.terraform.io/providers/hashicorp/azurerm/5.5.0/docs/resources/nat_gateway_public_ip_association) | resource |
 | [azurerm_network_interface.main](https://registry.terraform.io/providers/hashicorp/azurerm/5.5.0/docs/resources/network_interface) | resource |
 | [azurerm_public_ip.bastion_pip](https://registry.terraform.io/providers/hashicorp/azurerm/5.5.0/docs/resources/public_ip) | resource |
+| [azurerm_public_ip.nat](https://registry.terraform.io/providers/hashicorp/azurerm/5.5.0/docs/resources/public_ip) | resource |
 | [azurerm_subnet.bastion_subnet](https://registry.terraform.io/providers/hashicorp/azurerm/5.5.0/docs/resources/subnet) | resource |
 | [azurerm_subnet.internal](https://registry.terraform.io/providers/hashicorp/azurerm/5.5.0/docs/resources/subnet) | resource |
+| [azurerm_subnet_nat_gateway_association.private](https://registry.terraform.io/providers/hashicorp/azurerm/5.5.0/docs/resources/subnet_nat_gateway_association) | resource |
 | [azurerm_virtual_machine.main](https://registry.terraform.io/providers/hashicorp/azurerm/5.5.0/docs/resources/virtual_machine) | resource |
 | [azurerm_virtual_network.main](https://registry.terraform.io/providers/hashicorp/azurerm/5.5.0/docs/resources/virtual_network) | resource |
 | [azurerm_resource_group.example](https://registry.terraform.io/providers/hashicorp/azurerm/5.5.0/docs/data-sources/resource_group) | data source |
