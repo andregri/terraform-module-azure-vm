@@ -43,15 +43,13 @@ resource "azurerm_virtual_machine" "main" {
     computer_name  = "${var.prefix}-vm-${count.index}"
     admin_username = "testadmin"
     admin_password = "Password1234!"
+
+    custom_data = base64encode(var.cloud_init)
   }
   os_profile_linux_config {
     disable_password_authentication = false
   }
   tags = {
     environment = "staging"
-  }
-
-  provisioner "local-exec" {
-    command = var.local_provisioner_cmd
   }
 }

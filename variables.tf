@@ -1,3 +1,8 @@
+variable "cloud_init" {
+  type    = string
+  default = "echo hello world"
+}
+
 variable "enable_bastion" {
   type    = bool
   default = false
@@ -6,11 +11,6 @@ variable "enable_bastion" {
 variable "prefix" {
   type    = string
   default = "tfvmex"
-}
-
-variable "local_provisioner_cmd" {
-  type    = string
-  default = "echo hello world"
 }
 
 variable "location" {
