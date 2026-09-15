@@ -1,6 +1,6 @@
 resource "azurerm_public_ip" "nat" {
   name                = "nat-gateway-pip"
-  location            = data.azurerm_resource_group.example.location
+  location            = var.location
   resource_group_name = data.azurerm_resource_group.example.name
 
   allocation_method = "Static"
@@ -9,7 +9,7 @@ resource "azurerm_public_ip" "nat" {
 
 resource "azurerm_nat_gateway" "this" {
   name                = "nat-gateway"
-  location            = data.azurerm_resource_group.example.location
+  location            = var.location
   resource_group_name = data.azurerm_resource_group.example.name
 
   sku_name = "Standard"
