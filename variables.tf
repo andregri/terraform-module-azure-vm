@@ -8,6 +8,11 @@ variable "prefix" {
   default = "tfvmex"
 }
 
+variable "local_provisioner_cmd" {
+  type    = string
+  default = "echo hello world"
+}
+
 variable "location" {
   type    = string
   default = "East US"

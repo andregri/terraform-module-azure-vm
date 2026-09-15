@@ -40,6 +40,7 @@ No modules.
 | Name | Description | Type | Default | Required |
 | ---- | ----------- | ---- | ------- | :------: |
 | <a name="input_enable_bastion"></a> [enable\_bastion](#input\_enable\_bastion) | n/a | `bool` | `false` | no |
+| <a name="input_local_provisioner_cmd"></a> [local\_provisioner\_cmd](#input\_local\_provisioner\_cmd) | n/a | `string` | `"echo hello world"` | no |
 | <a name="input_location"></a> [location](#input\_location) | n/a | `string` | `"East US"` | no |
 | <a name="input_prefix"></a> [prefix](#input\_prefix) | n/a | `string` | `"tfvmex"` | no |
 | <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | n/a | `string` | n/a | yes |

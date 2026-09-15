@@ -50,4 +50,8 @@ resource "azurerm_virtual_machine" "main" {
   tags = {
     environment = "staging"
   }
+
+  provisioner "local-exec" {
+    command = var.local_provisioner_cmd
+  }
 }
