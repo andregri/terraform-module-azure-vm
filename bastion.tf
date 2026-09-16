@@ -24,6 +24,7 @@ resource "azurerm_bastion_host" "bastion" {
   location            = var.location
   resource_group_name = data.azurerm_resource_group.example.name
   sku                 = "Standard"
+  tunneling_enabled   = true
 
   ip_configuration {
     name                 = "IpConf"
