@@ -11,7 +11,7 @@ resource "azurerm_subnet" "bastion_subnet" {
 resource "azurerm_public_ip" "bastion_pip" {
   count               = var.enable_bastion ? 1 : 0
   name                = "${var.prefix}-bastion-pip"
-  location            = data.azurerm_resource_group.example.location
+  location            = var.location
   resource_group_name = data.azurerm_resource_group.example.name
   allocation_method   = "Static"
   sku                 = "Standard"
@@ -21,9 +21,10 @@ resource "azurerm_public_ip" "bastion_pip" {
 resource "azurerm_bastion_host" "bastion" {
   count               = var.enable_bastion ? 1 : 0
   name                = "${var.prefix}-network-bastion"
-  location            = data.azurerm_resource_group.example.location
+  location            = var.location
   resource_group_name = data.azurerm_resource_group.example.name
   sku                 = "Standard"
+  tunneling_enabled   = true
 
   ip_configuration {
     name                 = "IpConf"

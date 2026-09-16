@@ -1,28 +1,25 @@
-resource "azurerm_subnet" "internal" {
-  name                 = "internal"
-  resource_group_name  = data.azurerm_resource_group.example.name
-  virtual_network_name = azurerm_virtual_network.main.name
-  address_prefixes     = ["10.0.2.0/24"]
-}
-
 resource "azurerm_network_interface" "main" {
-  name                = "${var.prefix}-nic"
-  location            = data.azurerm_resource_group.example.location
+  count = var.vm_count
+
+  name                = "${var.prefix}-nic-${count.index}"
+  location            = var.location
   resource_group_name = data.azurerm_resource_group.example.name
 
   ip_configuration {
-    name                          = "testconfiguration1"
+    name                          = "testconfiguration-${count.index}"
     subnet_id                     = azurerm_subnet.internal.id
     private_ip_address_allocation = "Dynamic"
   }
 }
 
 resource "azurerm_virtual_machine" "main" {
-  name                  = "${var.prefix}-vm"
-  location              = data.azurerm_resource_group.example.location
+  count = var.vm_count
+
+  name                  = "${var.prefix}-vm-${count.index}"
+  location              = var.location
   resource_group_name   = data.azurerm_resource_group.example.name
-  network_interface_ids = [azurerm_network_interface.main.id]
-  vm_size               = "Standard_DS1_v2"
+  network_interface_ids = [azurerm_network_interface.main[count.index].id]
+  vm_size               = var.vm_size
 
   # Uncomment this line to delete the OS disk automatically when deleting the VM
   delete_os_disk_on_termination = true
@@ -37,15 +34,17 @@ resource "azurerm_virtual_machine" "main" {
     version   = "latest"
   }
   storage_os_disk {
-    name              = "${var.prefix}-myosdisk1"
+    name              = "${var.prefix}-myosdisk1-${count.index}"
     caching           = "ReadWrite"
     create_option     = "FromImage"
     managed_disk_type = "Standard_LRS"
   }
   os_profile {
-    computer_name  = "hostname"
+    computer_name  = "${var.prefix}-vm-${count.index}"
     admin_username = "testadmin"
     admin_password = "Password1234!"
+
+    custom_data = base64encode(var.cloud_init)
   }
   os_profile_linux_config {
     disable_password_authentication = false
