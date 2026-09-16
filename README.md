@@ -49,5 +49,8 @@ No modules.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+| ---- | ----------- |
+| <a name="output_vm_ids"></a> [vm\_ids](#output\_vm\_ids) | n/a |
+| <a name="output_vm_private_ips"></a> [vm\_private\_ips](#output\_vm\_private\_ips) | n/a |
 <!-- END_TF_DOCS -->
