@@ -1,3 +1,7 @@
+output "vm_hostnames" {
+  value = azurerm_virtual_machine.main[*].name
+}
+
 output "vm_ids" {
   value = azurerm_virtual_machine.main[*].id
 }
