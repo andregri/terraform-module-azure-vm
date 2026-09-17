@@ -9,3 +9,7 @@ output "vm_ids" {
 output "vm_private_ips" {
   value = azurerm_network_interface.main[*].private_ip_address
 }
+
+output "bastion_host_name" {
+  value = azurerm_bastion_host.bastion.name
+}

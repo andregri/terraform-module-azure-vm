@@ -51,6 +51,7 @@ No modules.
 
 | Name | Description |
 | ---- | ----------- |
+| <a name="output_bastion_host_name"></a> [bastion\_host\_name](#output\_bastion\_host\_name) | n/a |
 | <a name="output_vm_hostnames"></a> [vm\_hostnames](#output\_vm\_hostnames) | n/a |
 | <a name="output_vm_ids"></a> [vm\_ids](#output\_vm\_ids) | n/a |
 | <a name="output_vm_private_ips"></a> [vm\_private\_ips](#output\_vm\_private\_ips) | n/a |
