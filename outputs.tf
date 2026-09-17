@@ -11,5 +11,5 @@ output "vm_private_ips" {
 }
 
 output "bastion_host_name" {
-  value = azurerm_bastion_host.bastion.name
+  value = azurerm_bastion_host.bastion[0].name
 }
