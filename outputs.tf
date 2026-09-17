@@ -3,7 +3,7 @@ output "bastion_host_name" {
 }
 
 output "network_interface_ids" {
-  value = azurerm_network_interface.main[*].ids
+  value = azurerm_network_interface.main[*].id
 }
 
 output "subnet_id" {
