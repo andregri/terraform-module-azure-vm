@@ -52,6 +52,7 @@ No modules.
 | Name | Description |
 | ---- | ----------- |
 | <a name="output_bastion_host_name"></a> [bastion\_host\_name](#output\_bastion\_host\_name) | n/a |
+| <a name="output_network_interface_ids"></a> [network\_interface\_ids](#output\_network\_interface\_ids) | n/a |
 | <a name="output_subnet_id"></a> [subnet\_id](#output\_subnet\_id) | n/a |
 | <a name="output_vm_hostnames"></a> [vm\_hostnames](#output\_vm\_hostnames) | n/a |
 | <a name="output_vm_ids"></a> [vm\_ids](#output\_vm\_ids) | n/a |
