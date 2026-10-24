@@ -57,4 +57,6 @@ No modules.
 | <a name="output_vm_hostnames"></a> [vm\_hostnames](#output\_vm\_hostnames) | n/a |
 | <a name="output_vm_ids"></a> [vm\_ids](#output\_vm\_ids) | n/a |
 | <a name="output_vm_private_ips"></a> [vm\_private\_ips](#output\_vm\_private\_ips) | n/a |
+| <a name="output_vnet_rancher_id"></a> [vnet\_rancher\_id](#output\_vnet\_rancher\_id) | n/a |
+| <a name="output_vnet_rancher_name"></a> [vnet\_rancher\_name](#output\_vnet\_rancher\_name) | n/a |
 <!-- END_TF_DOCS -->
