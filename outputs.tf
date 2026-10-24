@@ -22,10 +22,10 @@ output "vm_private_ips" {
   value = azurerm_network_interface.main[*].private_ip_address
 }
 
-output "vnet_rancher_id" {
+output "vnet_id" {
   value = azurerm_virtual_network.main.id
 }
 
-output "vnet_rancher_name" {
+output "vnet_name" {
   value = azurerm_virtual_network.main.name
 }
